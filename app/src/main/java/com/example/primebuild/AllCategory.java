@@ -41,18 +41,18 @@ public class AllCategory extends AppCompatActivity {
         });
 
         allCategoriesList =new ArrayList<>();
-        allCategoriesList.add(new AllCategoryModel(1,R.drawable.ic_veggies));
-        allCategoriesList.add(new AllCategoryModel(2,R.drawable.ic_fruits));
-        allCategoriesList.add(new AllCategoryModel(3,R.drawable.ic_juce));
-        allCategoriesList.add(new AllCategoryModel(4,R.drawable.ic_dairy));
-        allCategoriesList.add(new AllCategoryModel(5,R.drawable.ic_meat));
-        allCategoriesList.add(new AllCategoryModel(6,R.drawable.ic_fish));
-        allCategoriesList.add(new AllCategoryModel(7,R.drawable.ic_egg));
-        allCategoriesList.add(new AllCategoryModel(8,R.drawable.ic_drink));
-        allCategoriesList.add(new AllCategoryModel(9,R.drawable.ic_desert));
-        allCategoriesList.add(new AllCategoryModel(10,R.drawable.ic_salad));
-        allCategoriesList.add(new AllCategoryModel(11,R.drawable.ic_cookies));
-        allCategoriesList.add(new AllCategoryModel(12,R.drawable.ic_spices));
+        allCategoriesList.add(new AllCategoryModel(1,R.drawable.aa1));
+        allCategoriesList.add(new AllCategoryModel(2,R.drawable.aa2));
+        allCategoriesList.add(new AllCategoryModel(3,R.drawable.aa3));
+        allCategoriesList.add(new AllCategoryModel(4,R.drawable.aa4));
+        allCategoriesList.add(new AllCategoryModel(5,R.drawable.aa5));
+        allCategoriesList.add(new AllCategoryModel(6,R.drawable.aa6));
+        allCategoriesList.add(new AllCategoryModel(7,R.drawable.aa7));
+//        allCategoriesList.add(new AllCategoryModel(8,R.drawable.ic_drink));
+//        allCategoriesList.add(new AllCategoryModel(9,R.drawable.ic_desert));
+//        allCategoriesList.add(new AllCategoryModel(10,R.drawable.ic_salad));
+//        allCategoriesList.add(new AllCategoryModel(11,R.drawable.ic_cookies));
+//        allCategoriesList.add(new AllCategoryModel(12,R.drawable.ic_spices));
         setAllCategoryRecycler();
     }
 

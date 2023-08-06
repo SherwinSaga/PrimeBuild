@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class ProductDetails extends AppCompatActivity {
-    ImageView imageViewProduct, imageViewBack;
+    ImageView imageViewProduct, imageViewBack,  Checkout;
     TextView txtName, txtDesc, txtPrice;
 
     @Override
@@ -26,6 +26,7 @@ public class ProductDetails extends AppCompatActivity {
         txtPrice = findViewById(R.id.lblPPrice);
         imageViewProduct= findViewById(R.id.imgProduct);
         imageViewBack = findViewById(R.id.imgBack);
+        Checkout = findViewById(R.id.btnCart);
         txtName.setText(name);
         txtPrice.setText(price);
         txtDesc.setText(desc);
@@ -36,6 +37,14 @@ public class ProductDetails extends AppCompatActivity {
                 Intent intent =new Intent(ProductDetails.this, MainActivity.class);
                 startActivity(intent);
                 finish();
+            }
+        });
+
+        Checkout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =new Intent(ProductDetails.this, Checkout.class);
+                startActivity(intent);
             }
         });
     }

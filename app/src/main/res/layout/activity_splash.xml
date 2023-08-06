@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".SplashActivity">
 
     <ImageView
         android:id="@+id/imgLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/logo"
-        android:layout_centerInParent="true"/>
+        android:layout_centerInParent="true"
+        app:srcCompat="@drawable/primebuild" />
 
     <TextView
         android:id="@+id/message"
@@ -20,6 +21,6 @@
         android:layout_below="@+id/imgLogo"
         android:layout_centerInParent="true"
         android:layout_centerHorizontal="true"
-        android:text="Designed by - Rohit Gupta" />
+        android:text="" />
 
 </RelativeLayout>

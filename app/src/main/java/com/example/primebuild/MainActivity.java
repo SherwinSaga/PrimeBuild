@@ -27,39 +27,49 @@ public class MainActivity extends AppCompatActivity {
     List<RecentlyViewed> recentlyViewedList;
     CategoryAdapter categoryAdapter;
     List<Category> categoryList;
-    ImageView allCategoryImageView;
+    ImageView allCategoryImageView, Cart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Cart = findViewById(R.id.cart);
+
+        Cart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,Cart.class);
+                startActivity(intent);
+            }
+        });
+
         discountedRecyclerView=findViewById(R.id.discountedRecycler);
         //adding data to model
         discountedProductsList =new ArrayList<>();
-        discountedProductsList.add(new DiscountedProducts(1,R.drawable.discountberry));
-        discountedProductsList.add(new DiscountedProducts(2,R.drawable.discountbrocoli));
-        discountedProductsList.add(new DiscountedProducts(3,R.drawable.discountmeat));
-        discountedProductsList.add(new DiscountedProducts(4,R.drawable.discountberry));
-        discountedProductsList.add(new DiscountedProducts(5,R.drawable.discountbrocoli));
-        discountedProductsList.add(new DiscountedProducts(6,R.drawable.discountmeat));
+        discountedProductsList.add(new DiscountedProducts(1,R.drawable.discount1));
+        discountedProductsList.add(new DiscountedProducts(2,R.drawable.discount2));
+        discountedProductsList.add(new DiscountedProducts(3,R.drawable.discount3));
+        discountedProductsList.add(new DiscountedProducts(4,R.drawable.discount1));
+        discountedProductsList.add(new DiscountedProducts(5,R.drawable.discount2));
+        discountedProductsList.add(new DiscountedProducts(6,R.drawable.discount3));
         setDiscountedRecycler(discountedProductsList);
 
         categoryRecyclerView =findViewById(R.id.catagoryRecycler);
         //adding data to model
         categoryList =new ArrayList<>();
-        categoryList.add(new Category(1,R.drawable.ic_veggies));
-        categoryList.add(new Category(2,R.drawable.ic_fruits));
-        categoryList.add(new Category(3,R.drawable.ic_juce));
-        categoryList.add(new Category(4,R.drawable.ic_dairy));
-        categoryList.add(new Category(5,R.drawable.ic_meat));
-        categoryList.add(new Category(6,R.drawable.ic_fish));
-        categoryList.add(new Category(7,R.drawable.ic_egg));
-        categoryList.add(new Category(8,R.drawable.ic_drink));
-        categoryList.add(new Category(9,R.drawable.ic_desert));
-        categoryList.add(new Category(10,R.drawable.ic_salad));
-        categoryList.add(new Category(11,R.drawable.ic_cookies));
-        categoryList.add(new Category(12,R.drawable.ic_spices));
+        categoryList.add(new Category(1,R.drawable.a1)); // to dooooooooads
+        categoryList.add(new Category(2,R.drawable.a2));
+        categoryList.add(new Category(3,R.drawable.a3));
+        categoryList.add(new Category(4,R.drawable.a4));
+        categoryList.add(new Category(5,R.drawable.a5));
+        categoryList.add(new Category(6,R.drawable.a6));
+        categoryList.add(new Category(7,R.drawable.a7));
+//        categoryList.add(new Category(8,R.drawable.ic_drink));
+//        categoryList.add(new Category(9,R.drawable.ic_desert));
+//        categoryList.add(new Category(10,R.drawable.ic_salad));
+//        categoryList.add(new Category(11,R.drawable.ic_cookies));
+//        categoryList.add(new Category(12,R.drawable.ic_spices));
         setCategoryRecycler();
 
         allCategoryImageView =findViewById(R.id.allCategoryImage);
@@ -74,10 +84,10 @@ public class MainActivity extends AppCompatActivity {
         recentlyViewedRecycler =findViewById(R.id.recently_items);
         //adding data to model
         recentlyViewedList =new ArrayList<>();
-        recentlyViewedList.add(new RecentlyViewed("Watermelon","Watermelon has high water content and also provide some fiber.","₹ 80","1","KG",R.drawable.card4,R.drawable.b4));
-        recentlyViewedList.add(new RecentlyViewed("Papaya","Papaya has high water content and also provide some fiber.","₹ 30","1","KG",R.drawable.card3,R.drawable.b3));
-        recentlyViewedList.add(new RecentlyViewed("strawberry","strawberry has high water content and also provide some fiber.","₹ 85","1","KG",R.drawable.card2,R.drawable.b1));
-        recentlyViewedList.add(new RecentlyViewed("Kiwi","Kiwi has high water content and also provide some fiber.","₹ 40","1","Pcs",R.drawable.card1,R.drawable.b2));
+        recentlyViewedList.add(new RecentlyViewed("Circular Saw","Simple yet reliable circular saw for rough cutting jobs.","₱ 2400","5","Pcs",R.drawable.newcard1,R.drawable.recently1));
+        recentlyViewedList.add(new RecentlyViewed("Cordless Drill","The perfect DIY tool.","₱ 35,000","9","Pcs",R.drawable.newcard2,R.drawable.recently2));
+        recentlyViewedList.add(new RecentlyViewed("Mallet","16 oz Rubber Mallet. Tough rubber head molded to wood handle","₹ 85","24","Pcs",R.drawable.newcard3,R.drawable.recently3));
+        recentlyViewedList.add(new RecentlyViewed("Pliers","High quality carbon steel wholebody heat treatment.","₹ 40","51","Pcs",R.drawable.newcard4,R.drawable.recent4));
         setRecentlyRecycler();
     }
 
